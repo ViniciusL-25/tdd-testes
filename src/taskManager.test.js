@@ -8,6 +8,7 @@ import {
 // ============================================================
 // 1. validateTitle
 // ============================================================
+
 describe("validateTitle", () => {
   it("deve retornar true para um título válido", () => {
     expect(validateTitle("Estudar Vitest")).toBe(true);
