@@ -236,6 +236,8 @@ describe("removeTask", () => {
   });
 });
 
+tasks.filter((task) => task.id !== taskId);
+
 // ============================================================
 // 6. filterTasks
 // ============================================================
@@ -362,3 +364,7 @@ describe("countPending", () => {
     expect(countPending(allCompleted)).toBe(0);
   });
 });
+
+export function toggleTask(task) {
+  return { ...task, completed: !task.completed };
+}

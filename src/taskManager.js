@@ -7,9 +7,6 @@
 //   - sem dependência de DOM, banco de dados ou APIs externas
 // ============================================================
 
-export function toggleTask(task) {
-  return { ...task, completed: !task.completed };
-}
 let _nextId = 1;
 
 /**
@@ -53,6 +50,17 @@ export function addTask(tasks, title) {
 
   const newTask = createTask(title);
   return [...tasks, newTask];
+}
+
+// ------------------------------------------------------------
+// Alteração de estado
+// ------------------------------------------------------------
+
+export function toggleTask(task) {
+  return {
+    ...task,
+    completed: !task.completed,
+  };
 }
 
 // ------------------------------------------------------------
